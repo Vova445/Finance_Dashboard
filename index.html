@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finance Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.2/css/bulma.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&family=Lato:wght@400;700&family=PT+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="animate__animated animate__fadeInDown">
+    <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <span><i class='bx bx-wallet-alt' ></i></span>
+            <h1 class="title is-4 has-text-white">Finance Dashboard</h1>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  
+
+  <section class="hero is-medium is-primary is-bold parallax animate__animated animate__fadeIn">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h2 class="title">Welcome to Finance Dashboard</h2>
+        <h3 class="subtitle">Explore your financial data with interactive charts</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section summary animate__animated animate__fadeInUp">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <h2 class="title">Financial Summary</h2>
+          <div class="summary-chart">
+            <canvas id="financialChart" width="400" height="200"></canvas>
+          </div>
+          <p class="subtitle">Here's a visual representation of your financial data:</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features animate__animated animate__fadeInLeft">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title"><i class='bx bxs-coin-stack'></i> Investment Portfolio</p>
+              <p>View your investment portfolio and track your assets.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title"><i class='bx bx-credit-card'></i> Expense Tracking</p>
+              <p>Track your expenses and analyze spending patterns.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="card-content">
+              <p class="title"><i class='bx bx-bar-chart-alt'></i> Budget Planning</p>
+              <p>Create and manage budgets to achieve financial goals.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section finances animate__animated animate__fadeInRight">
+    <div class="container">
+      <h2 class="title">Financial Trends</h2>
+      <div class="financial-trends">
+        <div class="columns">
+          <div class="column is-one-third">
+            <div class="trend-card">
+              <h3 class="subtitle"><i class='bx bx-line-chart'></i> Stock Prices</h3>
+              <canvas id="stockChart" width="300" height="200"></canvas>
+              <p>Explore the trends in stock prices over time.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="trend-card">
+              <h3 class="subtitle"><i class='bx bx-dollar'></i> Currency Exchange Rates</h3>
+              <canvas id="exchangeChart" width="300" height="200"></canvas>
+              <p>Track the changes in currency exchange rates.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="trend-card">
+              <h3 class="subtitle"><i class='bx bxl-bitcoin'></i> Cryptocurrency Prices</h3>
+              <canvas id="cryptoChart" width="300" height="200"></canvas>
+              <p>Monitor the fluctuations in cryptocurrency prices.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <section class="section tips animate__animated animate__fadeInUp">
+    <div class="container">
+      <h2 class="title">Financial Tips</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="tip-card">
+            <h3 class="subtitle"><i class='bx bxs-bank' ></i> Saving Money</h3>
+            <p>Set aside a portion of your income for savings each month to build an emergency fund.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="tip-card">
+            <h3 class="subtitle"><i class='bx bx-line-chart'></i> Investing Wisely</h3>
+            <p>Diversify your investments to spread risk and maximize potential returns.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="tip-card">
+            <h3 class="subtitle"><i class='bx bx-money'></i> Budgeting</h3>
+            <p>Create a monthly budget to track your expenses and prioritize your spending.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="tip-card">
+            <h3 class="subtitle"><i class='bx bx-credit-card'></i> Debt Management</h3>
+            <p>Develop a plan to pay off high-interest debts first and avoid accumulating new debt.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="tip-card">
+            <h3 class="subtitle"><i class='bx bx-book'></i> Financial Education</h3>
+            <p>Continue learning about personal finance to make informed decisions and improve your financial literacy.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="tip-card">
+            <h3 class="subtitle"><i class='bx bx-user-check'></i> Seek Professional Advice</h3>
+            <p>Consult with a financial advisor to help you achieve your financial goals and plan for the future.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="section insights animate__animated animate__fadeInLeft">
+    <div class="container">
+      <h2 class="title">Financial Insights</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="insight-card">
+            <h3 class="subtitle"><i class='bx bx-line-chart'></i> Market Trends</h3>
+            <p>Stay updated on the latest market trends and forecasts to make informed investment decisions.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="insight-card">
+            <h3 class="subtitle"><i class='bx bx-chart'></i> Economic Indicators</h3>
+            <p>Track key economic indicators such as GDP growth, unemployment rate, and inflation for better financial planning.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="insight-card">
+            <h3 class="subtitle"><i class='bx bx-news'></i> Financial News</h3>
+            <p>Read the latest financial news and analysis to stay ahead of market movements and developments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section new-charts animate__animated animate__fadeInRight">
+    <div class="container">
+      <h2 class="title">New Charts</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="chart-card">
+            <h3 class="subtitle"><i class='bx bx-building-house'></i> Real Estate Market Trends</h3>
+            <canvas id="realEstateChart" width="300" height="200"></canvas>
+            <p>Explore the latest trends in the real estate market to make informed property investment decisions.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="chart-card">
+            <h3 class="subtitle"><i class='bx bx-bar-chart'></i> Commodity Prices</h3>
+            <canvas id="commodityChart" width="300" height="200"></canvas>
+            <p>Track the prices of various commodities such as gold, oil, and agricultural products for better investment strategies.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="chart-card">
+            <h3 class="subtitle"><i class='bx bx-chip'></i> Tech Industry Stock Analysis</h3>
+            <canvas id="techStockChart" width="300" height="200"></canvas>
+            <p>Analyze the performance of leading tech companies' stocks to identify potential investment opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section crypto-investments animate__animated animate__fadeInLeft">
+    <div class="container">
+      <h2 class="title">Crypto Investments</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="crypto-card">
+            <h3 class="subtitle"><i class='bx bxl-bitcoin'></i> Bitcoin (BTC)</h3>
+            <p>Bitcoin is the first decentralized digital currency, and it has been dominating the cryptocurrency market since its inception. With a limited supply and growing demand, Bitcoin has become a popular choice for long-term investment.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="crypto-card">
+            <h3 class="subtitle"><i class="fa-brands fa-ethereum"></i> Ethereum (ETH)</h3>
+            <p>Ethereum is a decentralized platform that enables smart contracts and decentralized applications (DApps) to be built and operated without any downtime, fraud, control, or interference from a third party.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="crypto-card">
+            <h3 class="subtitle"><i class="fa-solid fa-coins"></i> Binance Coin (BNB)</h3>
+            <p>Binance Coin is a utility cryptocurrency that operates as a payment method for the fees associated with trading on the Binance Exchange. Users can also use BNB to participate in token sales hosted on the Binance Launchpad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section emerging-trends animate__animated animate__fadeInRight">
+    <div class="container">
+      <h2 class="title">Emerging Market Trends</h2>
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="emerging-chart-card">
+            <h3 class="subtitle"><i class='bx bx-sun'></i> Renewable Energy Investments</h3>
+            <canvas id="renewableEnergyChart" width="300" height="200"></canvas>
+            <p>Explore the growth of renewable energy investments and their impact on the market.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="emerging-chart-card">
+            <h3 class="subtitle"><i class='bx bx-block'></i> Blockchain Technology Adoption</h3>
+            <canvas id="blockchainChart" width="300" height="200"></canvas>
+            <p>Track the adoption of blockchain technology across industries and its potential for disruption.</p>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="emerging-chart-card">
+            <h3 class="subtitle"><i class='bx bx-brain'></i> Artificial Intelligence Market Growth</h3>
+            <canvas id="aiMarketChart" width="300" height="200"></canvas>
+            <p>Discover the exponential growth of the artificial intelligence market and its future projections.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  
+  
+  <footer class="footer animate__animated animate__fadeInUp">
+    <div class="content has-text-centered">
+      <p>&copy; 2024 Finance Dashboard. All rights reserved. Author Volodymyr Mikhnov</p>
+    </div>
+</footer>
+
+
+
+<button id="scrollToTopBtn" class="button is-primary is-hidden animate__animated animate__fadeInRight"><i class='bx bxs-upvote'></i></button>
+
+
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
